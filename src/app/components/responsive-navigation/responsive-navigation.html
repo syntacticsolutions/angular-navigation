@@ -1,31 +1,32 @@
 <nav [ngStyle]="{ background: background }">
     <ul
         [ngStyle]="{ background: background }"
-        ref="nav"
+        [ngClass]="{ active: navOpen }"
     >
         <figure
-            (click)="logoAction"
+            (click)="setNavSlider()"
             class="logo-image"
         >
             <img
-                [src]="logoUrl"
+                [src]="logo"
                 height="40px"
                 width="40px;"
                 alt="logo-image"
             />
         </figure>
-        <!-- <li
+        <li
             *ngFor="let link of navLinks"
+            #navItem
+            (mouseenter)="navItem.style.background = hoverBackground || '#444'"
+            (mouseleave)="navItem.style.background = background || '#222'"
+
         >
-         @mouseenter="$event.currentTarget.style.background = hoverBackground || '#444'"
-        @mouseleave="$event.currentTarget.style.background = background || '#222'"
-            <router-link
-                :to="path"
-                [ngStyle]="{ color: linkColor || '#DDD' }"
+            <a [routerLink]="link.path"
+                [ngStyle]="{ color: linkColor || '#ddd' }"
             >
-                {{ text }}
-                <i [class]="icon" class="nav-icon" />
-            </router-link>
-        </li> -->
+                {{ link.text }}
+                <i [class]="link.icon" class="nav-icon" ></i>
+            </a>
+        </li>
     </ul>
 </nav>

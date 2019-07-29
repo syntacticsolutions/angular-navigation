@@ -8,15 +8,19 @@ import { Component, Input } from '@angular/core';
   
   export class ResponsiveNavigation {
 	
-	@Input('logoUrl') logoUrl: string;
+	@Input('logo') logo: string;
 	@Input('navLinks') navLinks: object[];
 	@Input('background') background: string;
 	@Input('linkColor') linkColor: string;
 	@Input('hoverBackground') hoverBackground: string;
-	
-	constructor () {
+	navOpen:boolean = false
+	hoverIndex:number = -1
 
+	constructor () {
 	}
 
+	setNavSlider= () : void => {
+		this.navOpen = !this.navOpen
+  	}
 
   }
