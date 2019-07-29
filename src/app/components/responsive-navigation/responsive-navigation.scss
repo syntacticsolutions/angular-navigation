@@ -1,3 +1,5 @@
+
+
 figure {
     cursor: pointer;
     margin-block-start: 0;
@@ -34,9 +36,9 @@ nav {
 			flex-direction: row-reverse;
 		}
 
-		.nav-icon {
-			font-size: 20px;
-			margin-right: 10px;
+		i {
+			font-size: 24px;
+			margin-right: 8px;
 		}
 	}
 }
@@ -69,7 +71,7 @@ nav {
 				justify-content: space-between;
 				flex-direction: row;
 				margin-left: 20px;
-				margin-right: 13px;
+				margin-right: 10px;
 			}
 		}
 	}
