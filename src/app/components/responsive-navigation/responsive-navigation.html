@@ -1,0 +1,31 @@
+<nav [ngStyle]="{ background: background }">
+    <ul
+        [ngStyle]="{ background: background }"
+        ref="nav"
+    >
+        <figure
+            (click)="logoAction"
+            class="logo-image"
+        >
+            <img
+                [src]="logoUrl"
+                height="40px"
+                width="40px;"
+                alt="logo-image"
+            />
+        </figure>
+        <!-- <li
+            *ngFor="let link of navLinks"
+        >
+         @mouseenter="$event.currentTarget.style.background = hoverBackground || '#444'"
+        @mouseleave="$event.currentTarget.style.background = background || '#222'"
+            <router-link
+                :to="path"
+                [ngStyle]="{ color: linkColor || '#DDD' }"
+            >
+                {{ text }}
+                <i [class]="icon" class="nav-icon" />
+            </router-link>
+        </li> -->
+    </ul>
+</nav>
